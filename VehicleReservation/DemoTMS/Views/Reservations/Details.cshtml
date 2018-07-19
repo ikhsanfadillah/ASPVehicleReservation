@@ -1,0 +1,43 @@
+﻿@model DemoTMS.Models.Reservation
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pickup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pickup)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PickupDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PickupDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MasterUser.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
